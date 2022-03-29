@@ -1,0 +1,44 @@
+/* @import url('https://fonts.googleapis.com/'); */
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+
+
+}
+
+/* BEGIN GLOBAL DEFAULTS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* END GLOBAL DEFAULTS */
+
+
+/* extra small and down - phones */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* small and up - large phones and tablets */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* medium and up */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* large and up */
+@media only screen and (min-width: 992px) {
+
+}
