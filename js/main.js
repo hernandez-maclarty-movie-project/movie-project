@@ -75,3 +75,62 @@ function getDataOmdb() {
 }
 
 
+// anthony work
+// addmovie function
+$(document).ready(function() {
+    let movieArray = [];
+    let url = "https://equal-factual-wallet.glitch.me/movies";
+    const moviePosters = () => {
+        let loader = `<div class="loading"><img src="img/loading.gif"></div>`;
+        $("#container").html(loader);
+        fetch(url)
+            .then(resp => resp.json())
+            .then(movies => {
+                movieArray = movies;
+                let htmlStr = "";
+                let html = "";
+                for (let movie of movies) {
+
+                    //creates the dropdown menus for select
+                    html += `<option value=${movie.id}>${movie.title}</option>`;
+
+                    //creates movie posters
+                    htmlStr += `<div class="posters grow gradient-border"><div>`
+                    htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
+                    htmlStr += `<div class="underImgContainer"><div class="rating">${createStars(movie)}</div><div class="director">By: ${movie.director}</div></div>`;
+                    htmlStr += `<div class="description">${movie.plot}</div>`;
+                    htmlStr += `</div></div>`;
+                }
+
+                //pushes created card or dropdown menu to the screen
+                console.log(movies)
+                $("#container").html(htmlStr);
+                $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
+                $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
+            });
+    }
+    moviePosters();
+    $('#newMovie').click((e) => {
+        e.preventDefault();
+
+        var addMovie = {
+            title: $("#title").val(),
+            genre: $("#genre").val(),
+            rating: $("#rating").val(),
+            director: $("#director").val(),
+            plot: $("#plot").val()
+        }
+        let postOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(addMovie)
+        }
+        //POST movie
+        fetch(glitchUrl, postOptions)
+            .then(resp => resp.json())
+            .then(moviePosters).catch(error => console.log(error))
+    });
+});
+// end add movie
