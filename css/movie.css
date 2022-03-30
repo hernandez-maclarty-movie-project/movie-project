@@ -1,0 +1,255 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Raleway;
+    background-color: black;
+    color: white;
+}
+.active{
+    color: red !important;
+}
+a:hover{
+    color: red !important;
+}
+a{
+    text-decoration: none !important;
+}
+/* Section 1 Style Starts */
+.background{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: auto;
+    height: 100%;
+}
+.logo{
+    color: red;
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+.logo2{
+    color: white;
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+.navtext{
+    color: white;
+    text-decoration: none;
+    /* margin-left: 2%; */
+    padding: 10px 10px;
+    font-size: 14px;
+    text-decoration-line: none;
+}
+.navtext2{
+    color: white;
+    text-decoration: none;
+    margin: 5%;
+    text-decoration-line: none;
+}
+.navtext3{
+    color: white;
+    text-decoration: none;
+    margin: 5%;
+    text-decoration-line: none;
+}
+.header_text{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+.container-fluid{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: auto;
+}
+.container{
+    width: 80%;
+    margin-left: 10%;
+
+}
+.push{
+    padding-bottom: 19.3%;
+}
+@media(max-width: 908px){
+    .login{
+        display: none;
+    }
+}
+@media(max-width: 908px){
+    .signup{
+        display: none;
+    }
+}
+@media(max-width: 908px){
+    nav header{
+        color: white !important;
+        text-align: center !important;
+        flex-direction: column !important;
+    }
+}
+.login{
+    color: white;
+    width: 7%;
+    font-size: 12px;
+    padding: 1%;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 5%;
+    border: 1px solid red;
+}
+.login:hover{
+    background-color: transparent !important;
+    cursor: pointer;
+}
+.signup{
+    color: white;
+    width: 10%;
+    font-size: 12px;
+    padding: 1%;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5%;
+    border: 1px solid red;
+}
+.signup:hover{
+    background-color: red !important;
+    cursor: pointer;
+}
+.search_button{
+    color: white;
+    width: 50%;
+    background-color: transparent;
+    margin-left: 25%;
+    padding: 1%;
+    font-weight: bold;
+    border: 1px solid red;
+}
+.search_button:hover{
+    background-color: red !important;
+    transition: 1s;
+    cursor: pointer;
+}
+.lorem{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 10%;
+}
+.input{
+    border-radius: 50px;
+    border: 1px solid red;
+    width: 50%;
+    padding: 1%;
+    background-color: white;
+    margin-left: 24%;
+}
+/* Section 1 Style Ends */
+
+/* Section 2 Style Start */
+.trending_movies{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.section2{
+    background-color: rgb(14, 30, 36);
+}
+.latest_movies{
+    padding: 1%;
+    /* margin-top: 5%; */
+}
+/* Section 2 Style Ends */
+
+
+/* Section 3 Start */
+.section3{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: auto;
+}
+.movies_tv_shows{
+    color: white;
+    font-weight: bolder;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.details2{
+    background-color: black;
+}
+.how_it_works_background{
+    background-color: black;
+    padding: 10%;
+    position: relative;
+}
+.how_it_works{
+    color: red;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+}
+.under{
+    color: black;
+    text-align: center;
+}
+
+.signup_pics{
+    margin-left: 25% !important;
+    top: 16px;
+    position: absolute;
+}
+.pricing_pics{
+    margin-left: 20% !important;
+    top: 42%;
+    position: absolute;
+}
+.space{
+    margin-bottom: 25%;
+    bottom: 20%;
+}
+
+.space2{
+    margin-bottom: 25%;
+    bottom: 20%;
+}
+
+.enjoy_pics{
+    margin-left: 30% !important;
+    top: 70%;
+    position: absolute;
+}
+@media(max-width: 950px) {
+    .signup_pics, .pricing_pics, .enjoy_pics {
+        display: none;
+    }
+
+    @media (max-width: 950px) {
+        .signup_pics, .pricing_pics, .enjoy_pics {
+            display: none;
+        }
+
+        /* Section 3 Ends */
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .about-us {
+            color: white;
+            font-size: 12px;
+
+        }
+    }
+}
+/* Footer Ends */
