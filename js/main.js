@@ -5,7 +5,6 @@
 let glitchUrl = 'https://equal-factual-wallet.glitch.me/movies';
 let html = "";
 let movies;
-let loading
 
 let omdbUrl = 'https://www.omdbapi.com';
 let omdbData;
@@ -16,6 +15,7 @@ getDataGlitch();
 // getDataOmdb();
 
 
+
 function getDataGlitch() {
     fetch(glitchUrl)
         .then((response) => response.json())
@@ -24,6 +24,9 @@ function getDataGlitch() {
             console.log(glitchData);
 
             movies = document.querySelector(".list");
+
+            // loading message enabled / visible
+            document.querySelector('#modal-loading').classList.remove('hidden');
 
             glitchData.forEach(function (movie) {
 
@@ -36,11 +39,14 @@ function getDataGlitch() {
                         <div>Genre: ${movie.genre}</div>
                         <div>ID: ${movie.id}</div>
                         <div>Plot: ${movie.plot}</div>
-<!--                        <div>Poster: <img src="${movie.poster}" alt="Movie Poster"></div>-->
+                        <!--                        <div>Poster: <img src="${movie.poster}" alt="Movie Poster"></div>-->
                         <div>Rating: ${movie.rating}</div>
                         <div>Year: ${movie.year}</div>
                     `
                 movies.innerHTML += html;
+
+                // loading message disabled / not visible
+                document.querySelector('#modal-loading').classList.add('hidden');
 
             })
         });

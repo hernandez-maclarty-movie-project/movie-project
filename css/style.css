@@ -26,9 +26,9 @@ html {
 /* END GLOBAL DEFAULTS */
 
 #modal-loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     position: absolute;
     margin: 0 auto;
     width: 5rem;
