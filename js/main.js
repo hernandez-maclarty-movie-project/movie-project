@@ -39,7 +39,7 @@ function getDataGlitch() {
                         <div>Genre: ${movie.genre}</div>
                         <div>ID: ${movie.id}</div>
                         <div>Plot: ${movie.plot}</div>
-                        <div>Poster: <img src="${movie.poster}" alt="Movie Poster for the movie ${movie.title}"></div>
+                        <div>Poster: <img src="${movie.poster}" alt="Movie poster for the movie ${movie.title}"></div>
                         <div>Rating: ${movie.rating}</div>
                         <div>Year: ${movie.year}</div>
                     `
