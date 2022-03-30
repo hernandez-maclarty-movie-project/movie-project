@@ -5,6 +5,7 @@
 let glitchUrl = 'https://equal-factual-wallet.glitch.me/movies';
 let html = "";
 let movies;
+let loading
 
 let omdbUrl = 'https://www.omdbapi.com';
 let omdbData;
