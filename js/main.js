@@ -7,6 +7,7 @@ let html = "";
 let movies;
 
 let omdbUrl = 'https://www.omdbapi.com';
+let omdbData;
 let omdbTitle;
 
 
@@ -25,10 +26,18 @@ function getDataGlitch() {
 
             glitchData.forEach(function (movie) {
 
+                // returnreturn - poster is commented out because of errors when value is empty
                 //language=HTML
                 html =
                     `
                         <div>Title: ${movie.title}</div>
+                        <div>Director: ${movie.director}</div>
+                        <div>Genre: ${movie.genre}</div>
+                        <div>ID: ${movie.id}</div>
+                        <div>Plot: ${movie.plot}</div>
+<!--                        <div>Poster: <img src="${movie.poster}" alt="Movie Poster"></div>-->
+                        <div>Rating: ${movie.rating}</div>
+                        <div>Year: ${movie.year}</div>
                     `
                 movies.innerHTML += html;
 
@@ -49,11 +58,11 @@ function rmMovie() {
 
 }
 
-
+// BEGIN GET OMDB
 function getDataOmdb() {
     fetch(`${omdbUrl}/?apikey=${OMDB_KEY}&t=${omdbTitle}`)
         .then((response) => response.json())
-        .then((omdgData) => {
+        .then((omdbData) => {
             console.log(omdbData);
         });
 }
