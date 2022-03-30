@@ -12,21 +12,21 @@ let omdbTitle;
 
 
 getDataGlitch();
+
 // getDataOmdb();
 
 
-
 function getDataGlitch() {
+
     fetch(glitchUrl)
         .then((response) => response.json())
+        .then()
         .then((glitchData) => {
 
             console.log(glitchData);
 
             movies = document.querySelector(".list");
 
-            // loading message enabled / visible
-            document.querySelector('#modal-loading').classList.remove('hidden');
 
             glitchData.forEach(function (movie) {
 

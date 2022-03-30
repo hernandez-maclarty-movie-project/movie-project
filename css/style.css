@@ -23,12 +23,11 @@ html {
 .hidden {
     display: none;
 }
+
 /* END GLOBAL DEFAULTS */
 
+
 #modal-loading {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     position: absolute;
     margin: 0 auto;
     width: 5rem;
@@ -39,6 +38,7 @@ html {
     color: var(--white);
     background-color: var(--black);
 }
+
 
 /* extra small and down - phones */
 @media only screen and (max-width: 600px) {
