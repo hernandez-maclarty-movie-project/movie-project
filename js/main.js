@@ -82,7 +82,7 @@ function getDataOmdb() {
 
 // anthony work
 // addmovie function
-$(document).ready(function() {
+$(document).ready(function () {
     let movieArray = [];
     let url = "https://equal-factual-wallet.glitch.me/movies";
     const moviePosters = () => {
@@ -102,7 +102,6 @@ $(document).ready(function() {
                     //creates movie posters
                     htmlStr += `<div class="posters grow gradient-border"><div>`
                     htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
-                    htmlStr += `<div class="underImgContainer"><div class="rating">${createStars(movie)}</div><div class="director">By: ${movie.director}</div></div>`;
                     htmlStr += `<div class="description">${movie.plot}</div>`;
                     htmlStr += `</div></div>`;
                 }
@@ -115,6 +114,30 @@ $(document).ready(function() {
             });
     }
     moviePosters();
+// selectmenu1 updating feild
+
+    $("#selectMenu").change(function () {
+        let target = $(this).val()
+        console.log(target);
+
+        // grab info from json to  populate fields
+        for (let movie of movieArray) {
+            if (movie.id == target) {
+                $("#newTitle").val(movie.title);
+                $("#newGenre").val(movie.genre);
+                $("#newRating").val(movie.rating);
+                $("#newDirector").val(movie.director);
+                $("#newPlot").val(movie.plot);
+            }
+        }
+    });
+
+// End select menu field1
+// Edit movie Function
+
+
+// Adding new moives
+
     $('#newMovie').click((e) => {
         e.preventDefault();
 
