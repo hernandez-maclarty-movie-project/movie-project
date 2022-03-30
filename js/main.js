@@ -61,8 +61,13 @@ function editMovie() {
 
 }
 
-function rmMovie() {
+function rmMovie(id) {
+    let options = {
+        method: 'DELETE'
+    }
 
+    fetch(`${glitchUrl}/${id}`, options)
+        .then(getDataGlitch());
 }
 
 // BEGIN GET OMDB
