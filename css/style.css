@@ -20,7 +20,24 @@ html {
     font-size: 16px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* END GLOBAL DEFAULTS */
+
+
+#modal-loading {
+    position: absolute;
+    margin: 0 auto;
+    width: 5rem;
+    height: 2rem;
+    left: -50%;
+    right: -50%;
+    top: 20%;
+    color: var(--white);
+    background-color: var(--black);
+}
 
 
 /* extra small and down - phones */

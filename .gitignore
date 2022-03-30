@@ -2,5 +2,5 @@
 *.iml
 secret.txt
 secrets.txt
-js/keys
+js/keys.js
 js/keys.txt
