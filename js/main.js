@@ -15,7 +15,7 @@ function getDataGlitch() {
         .then()
         .then((glitchData) => {
 
-            console.log(glitchData);
+            // console.log(glitchData);
 
             movies = document.querySelector(".list");
 
@@ -34,11 +34,18 @@ function getDataGlitch() {
                         <div>Poster: <img src="${movie.poster}" alt="Movie poster for the movie ${movie.title}"></div>
                         <div>Rating: ${movie.rating}</div>
                         <div>Year: ${movie.year}</div>
+                        <button id="button-rm-movie" type="submit" data-id="${movie.id}">Remove</button>
                     `
                 movies.innerHTML += html;
             })
+
         });
+    $("#button-rm-movie").click(function () {
+        console.log(`clicking rm button`)
+        // rmMovie(id);
+    })
 }
+
 
 // anthony work
 // add movie function
@@ -95,6 +102,20 @@ $(document).ready(function () {
         fetch(`${url}/${input}`, patchOptions)
             .then(moviePosters);
     });
+
+    // $("#button-rm-movie").click(function () {
+    //     console.log(`clicking rm button`)
+    //     // rmMovie(id);
+    // })
+
+    function rmMovie(id) {
+        let options = {
+            method: 'DELETE'
+        }
+
+        fetch(`${glitchUrl}/${id}`, options)
+            .then(moviePosters());
+    }
 
 // select menu 1 updating field edit
 
