@@ -39,7 +39,6 @@
         <div id="bad">
             <h2 class="header_text">Search for Latest Movies and Series</h2>
             <input type="text" placeholder="Search for movies" class="input"><br>
-            <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
             &nbsp;<br>
             <button class="search_button">SEARCH</button>
             &nbsp;<br>
@@ -53,13 +52,13 @@
         </div>
     </div>
     <div id="modal-loading">Loading...</div>
-
     <div class="list"></div>
     <div class="rightSide d-flex row">
+<!--start of movie edit section-->
         <div class="">
             <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
-            <select  id="selectMenu" class="hidden1 select"></select>
-            <div class="hidden1 editMovie" id="editMovie">
+            <select id="selectMenu" class="select"></select>
+            <div class="editMovie" id="editMovie">
                 <label for="newTitle">Change Title </label>
                 <input type="text" id="newTitle">
                 <br>
@@ -81,31 +80,34 @@
                 <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
             </div>
         </div>
+<!--  end of edit section for movie      -->
+<!--        Start Of Editing and Add section for movie-->
         <div class="">
-        <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
-        <div class="hidden1 editMovie" id="postMovie">
-            <label for="title">Title </label>
-            <input type="text" id="title">
-            <br>
-            <label for="genre">Genre </label>
-            <input type="text" id="genre">
-            <br>
-            <label for="rating">Rating </label>
-            <input type="text" id="rating">
-            <br>
-            <label for="director">Director </label>
-            <input type="text" id="director">
-            <br>
-            <div class="textBox">
-                <label for="plot">Plot </label>
-                <textarea id="plot" rows="5" cols="40"></textarea>
+            <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
+            <div class="editMovie" id="postMovie">
+                <label for="title">Title </label>
+                <input type="text" id="title">
+                <br>
+                <label for="genre">Genre </label>
+                <input type="text" id="genre">
+                <br>
+                <label for="rating">Rating </label>
+                <input type="text" id="rating">
+                <br>
+                <label for="director">Director </label>
+                <input type="text" id="director">
+                <br>
+                <div class="textBox">
+                    <label for="plot">Plot </label>
+                    <textarea id="plot" rows="5" cols="40"></textarea>
+                </div>
+                <br>
+                <button id="newMovie" class="btn button-outline-secondary">Add Movie</button>
             </div>
-
-            <br>
-            <button id="newMovie" class="btn button-outline-secondary">Add Movie</button>
         </div>
     </div>
-    </div>
+<!--    End of Editing section and add section-->
+<!--    Placeholder for Image section for movies still img-->
 </section>
 <section class="section2">
     <div class="container">
@@ -122,7 +124,8 @@
         </div>
     </div>
 </section>
-
+<!--end of Img section for trending-->
+<!--Start Of Tv shows img section-->
 <section class="section3">
     <div class="container">
         &nbsp;
@@ -133,6 +136,8 @@
             <img src="" alt="" class="latest_movies">
         </div>
     </div>
+<!--    End of tv show editing section-->
+
 </section>
 <div class=" container-fluid details2">
     <div class="container details2">
@@ -189,7 +194,8 @@
 
 
 <!--script tags-->
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 
 </body>

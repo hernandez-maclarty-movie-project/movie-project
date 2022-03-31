@@ -9,13 +9,13 @@ body{
     color: white;
 }
 .active{
-    color: red !important;
+    color: red ;
 }
 a:hover{
-    color: red !important;
+    color: red ;
 }
 a{
-    text-decoration: none !important;
+    text-decoration: none ;
 }
 /* Section 1 Style Starts */
 .background{
@@ -27,13 +27,13 @@ a{
 }
 .logo{
     color: red;
-    text-decoration: none !important;
-    text-decoration-line: none !important;
+    text-decoration: none ;
+    text-decoration-line: none ;
 }
 .logo2{
     color: white;
-    text-decoration: none !important;
-    text-decoration-line: none !important;
+    text-decoration: none ;
+    text-decoration-line: none ;
 }
 .navtext{
     color: white;
@@ -88,9 +88,9 @@ a{
 }
 @media(max-width: 908px){
     nav header{
-        color: white !important;
-        text-align: center !important;
-        flex-direction: column !important;
+        color: white ;
+        text-align: center ;
+        flex-direction: column ;
     }
 }
 .login{
@@ -104,7 +104,7 @@ a{
     border: 1px solid red;
 }
 .login:hover{
-    background-color: transparent !important;
+    background-color: transparent ;
     cursor: pointer;
 }
 .signup{
@@ -118,7 +118,7 @@ a{
     border: 1px solid red;
 }
 .signup:hover{
-    background-color: red !important;
+    background-color: red ;
     cursor: pointer;
 }
 .search_button{
@@ -131,7 +131,7 @@ a{
     border: 1px solid red;
 }
 .search_button:hover{
-    background-color: red !important;
+    background-color: red ;
     transition: 1s;
     cursor: pointer;
 }
@@ -203,12 +203,12 @@ a{
 }
 
 .signup_pics{
-    margin-left: 25% !important;
+    margin-left: 25% ;
     top: 16px;
     position: absolute;
 }
 .pricing_pics{
-    margin-left: 20% !important;
+    margin-left: 20% ;
     top: 42%;
     position: absolute;
 }
@@ -223,7 +223,7 @@ a{
 }
 
 .enjoy_pics{
-    margin-left: 30% !important;
+    margin-left: 30% ;
     top: 70%;
     position: absolute;
 }
