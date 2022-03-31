@@ -1,127 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
-    font-family: Raleway;
+
+body {
+    font-family: Raleway, sans-serif;
     background-color: black;
     color: white;
 }
-.active{
-    color: red ;
-}
-a:hover{
-    color: red ;
-}
-a{
-    text-decoration: none ;
-}
-/* Section 1 Style Starts */
-.background{
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: auto;
-    height: 100%;
-}
-.logo{
-    color: red;
-    text-decoration: none ;
-    text-decoration-line: none ;
-}
-.logo2{
-    color: white;
-    text-decoration: none ;
-    text-decoration-line: none ;
-}
-.navtext{
-    color: white;
-    text-decoration: none;
-    /* margin-left: 2%; */
-    padding: 10px 10px;
-    font-size: 14px;
-    text-decoration-line: none;
-}
-.navtext2{
-    color: white;
-    text-decoration: none;
-    margin: 5%;
-    text-decoration-line: none;
-}
-.navtext3{
-    color: white;
-    text-decoration: none;
-    margin: 5%;
-    text-decoration-line: none;
-}
-.header_text{
-    color: white;
-    font-size: 35px;
-    text-align: center;
-    font-weight: bold;
-}
-.container-fluid{
+
+.container-fluid {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-size: auto;
 }
-.container{
+
+.container {
     width: 80%;
     margin-left: 10%;
+}
 
+a {
+    text-decoration: none;
 }
-.push{
-    padding-bottom: 19.3%;
+
+a:hover {
+    color: red;
 }
-@media(max-width: 908px){
-    .login{
-        display: none;
-    }
+
+.logo {
+    color: red;
+    text-decoration: none;
 }
-@media(max-width: 908px){
-    .signup{
-        display: none;
-    }
-}
-@media(max-width: 908px){
-    nav header{
-        color: white ;
-        text-align: center ;
-        flex-direction: column ;
-    }
-}
-.login{
+
+.logo2 {
     color: white;
-    width: 7%;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navtext {
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+.navtext3 {
+    color: white;
+    text-decoration: none;
+    margin: 5%;
+}
+
+.header_text {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login,
+.signup {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 12px;
-    padding: 1%;
     background-color: red;
     font-weight: bold;
-    border-radius: 5%;
     border: 1px solid red;
 }
-.login:hover{
-    background-color: transparent ;
-    cursor: pointer;
-}
-.signup{
-    color: white;
-    width: 10%;
-    font-size: 12px;
-    padding: 1%;
+
+.login:hover,
+.signup:hover {
     background-color: transparent;
-    font-weight: bold;
-    border-radius: 5%;
-    border: 1px solid red;
 }
-.signup:hover{
-    background-color: red ;
-    cursor: pointer;
+
+
+.search_button,
+.input {
+    text-align: center;
+    width: 50%;
+    border-radius: 5px;
 }
-.search_button{
+
+.search_button {
     color: white;
     width: 50%;
     background-color: transparent;
@@ -130,126 +104,148 @@ a{
     font-weight: bold;
     border: 1px solid red;
 }
-.search_button:hover{
-    background-color: red ;
+
+.search_button:hover {
+    background-color: red;
     transition: 1s;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
-.lorem{
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    padding: 10%;
-}
-.input{
-    border-radius: 50px;
+
+.input {
+    /*border-radius: 50px;*/
     border: 1px solid red;
-    width: 50%;
+    /*width: 50%;*/
     padding: 1%;
     background-color: white;
     margin-left: 24%;
+    margin-bottom: 5px;
 }
+
 /* Section 1 Style Ends */
 
 /* Section 2 Style Start */
-.trending_movies{
+.trending_movies {
     color: white;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
 }
-.section2{
+
+.section2 {
     background-color: rgb(14, 30, 36);
 }
-.latest_movies{
+
+.latest_movies {
     padding: 1%;
-    /* margin-top: 5%; */
 }
+
 /* Section 2 Style Ends */
 
 
 /* Section 3 Start */
-.section3{
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: auto;
-}
-.movies_tv_shows{
+.movies_tv_shows {
     color: white;
     font-weight: bolder;
     text-align: left;
     text-transform: uppercase;
 }
 
-.details2{
+.details2 {
     background-color: black;
 }
-.how_it_works_background{
+
+.how_it_works_background {
     background-color: black;
     padding: 10%;
     position: relative;
 }
-.how_it_works{
+
+.how_it_works {
     color: red;
     text-transform: capitalize;
     text-align: center;
     font-weight: bolder;
     font-size: 35px;
 }
-.under{
+
+.under {
     color: black;
     text-align: center;
 }
 
-.signup_pics{
-    margin-left: 25% ;
+.signup_pics {
+    margin-left: 25%;
     top: 16px;
     position: absolute;
 }
-.pricing_pics{
-    margin-left: 20% ;
+
+.pricing_pics {
+    margin-left: 20%;
     top: 42%;
     position: absolute;
 }
-.space{
+
+.space {
     margin-bottom: 25%;
     bottom: 20%;
 }
 
-.space2{
+.space2 {
     margin-bottom: 25%;
     bottom: 20%;
 }
 
-.enjoy_pics{
-    margin-left: 30% ;
+.enjoy_pics {
+    margin-left: 30%;
     top: 70%;
     position: absolute;
 }
-@media(max-width: 950px) {
+
+/* Footer Ends */
+
+
+@media (max-width: 908px) {
+    .login {
+        display: none;
+    }
+}
+
+@media (max-width: 908px) {
+    .signup {
+        display: none;
+    }
+}
+
+@media (max-width: 908px) {
+    nav header {
+        color: white;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 950px) {
+    .signup_pics, .pricing_pics, .enjoy_pics {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
     .signup_pics, .pricing_pics, .enjoy_pics {
         display: none;
     }
 
-    @media (max-width: 950px) {
-        .signup_pics, .pricing_pics, .enjoy_pics {
-            display: none;
-        }
+    /* Section 3 Ends */
+    /* Footer */
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
 
-        /* Section 3 Ends */
-        /* Footer */
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
+    .about-us {
+        color: white;
+        font-size: 12px;
 
-        .about-us {
-            color: white;
-            font-size: 12px;
-
-        }
     }
 }
-/* Footer Ends */
