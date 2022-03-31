@@ -5,15 +5,7 @@
 let glitchUrl = 'https://equal-factual-wallet.glitch.me/movies';
 let html = "";
 let movies;
-
-let omdbUrl = 'https://www.omdbapi.com';
-let omdbData;
-let omdbTitle;
-
-
 getDataGlitch();
-
-// getDataOmdb();
 
 
 function getDataGlitch() {
@@ -30,8 +22,8 @@ function getDataGlitch() {
 
             glitchData.forEach(function (movie) {
 
-                // returnreturn - poster is commented out because of errors when value is empty
-                //language=HTML
+//                 // returnreturn - poster is commented out because of errors when value is empty
+//                 //language=HTML
                 html =
                     `
                         <div>Title: ${movie.title}</div>
@@ -44,49 +36,17 @@ function getDataGlitch() {
                         <div>Year: ${movie.year}</div>
                     `
                 movies.innerHTML += html;
-
-                // loading message disabled / not visible
-                document.querySelector('#modal-loading').classList.add('hidden');
-
             })
         });
 }
 
-
-function addMovie() {
-
-}
-
-function editMovie() {
-
-}
-
-function rmMovie(id) {
-    let options = {
-        method: 'DELETE'
-    }
-
-    fetch(`${glitchUrl}/${id}`, options)
-        .then(getDataGlitch());
-}
-
-// BEGIN GET OMDB
-function getDataOmdb() {
-    fetch(`${omdbUrl}/?apikey=${OMDB_KEY}&t=${omdbTitle}`)
-        .then((response) => response.json())
-        .then((omdbData) => {
-            console.log(omdbData);
-        });
-}
-
-
 // anthony work
-// addmovie function
+// add movie function
 $(document).ready(function () {
     let movieArray = [];
     let url = "https://equal-factual-wallet.glitch.me/movies";
     const moviePosters = () => {
-        let loader = `<div class="loading"><img src="img/loading.gif"></div>`;
+        let loader = `<div class="loading"><img src=""></div>`;
         $("#container").html(loader);
         fetch(url)
             .then(resp => resp.json())
@@ -100,21 +60,43 @@ $(document).ready(function () {
                     html += `<option value=${movie.id}>${movie.title}</option>`;
 
                     //creates movie posters
-                    htmlStr += `<div class="posters grow gradient-border"><div>`
-                    htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
-                    htmlStr += `<div class="description">${movie.plot}</div>`;
-                    htmlStr += `</div></div>`;
+                    // htmlStr += `<div class="posters grow gradient-border"><div>`
+                    // htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
+                    // htmlStr += `<div class="description">${movie.plot}</div>`;
+                    // htmlStr += `</div></div>`;
                 }
 
                 //pushes created card or dropdown menu to the screen
                 console.log(movies)
                 $("#container").html(htmlStr);
                 $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
-                $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
             });
     }
+
     moviePosters();
-// selectmenu1 updating feild
+    //Edit selected movie
+    $("#changeMovie").click(function () {
+        let input = $("#selectMenu").val()
+        let insert = {
+            title: $("#newTitle").val(),
+            genre: $("#newGenre").val(),
+            rating: $("#newRating").val(),
+            director: $("#newDirector").val(),
+            plot: $("#newPlot").val()
+        }
+        let patchOptions = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(insert)
+        }
+        //PATCH request
+        fetch(`${url}/${input}`, patchOptions)
+            .then(moviePosters);
+    });
+
+// select menu 1 updating field edit
 
     $("#selectMenu").change(function () {
         let target = $(this).val()
@@ -132,7 +114,8 @@ $(document).ready(function () {
         }
     });
 
-// End select menu field1
+// End select menu field 1
+
 // Edit movie Function
 
 
