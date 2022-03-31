@@ -1,59 +1,10 @@
 "use strict";
 
-
-// VARIABLES
-let glitchUrl = 'https://equal-factual-wallet.glitch.me/movies';
-let html = "";
-let movies;
-getDataGlitch();
-
-
-function getDataGlitch() {
-
-    fetch(glitchUrl)
-        .then((response) => response.json())
-        .then()
-        .then((glitchData) => {
-
-            // console.log(glitchData);
-
-            movies = document.querySelector(".list");
-
-
-            glitchData.forEach(function (movie) {
-
-//                 // returnreturn - poster is commented out because of errors when value is empty
-//                 //language=HTML
-                html =
-                    `
-                        <div>Title: ${movie.title}</div>
-                        <div>Director: ${movie.director}</div>
-                        <div>Genre: ${movie.genre}</div>
-                        <div>ID: ${movie.id}</div>
-                        <div>Plot: ${movie.plot}</div>
-                        <div>Poster: <img src="${movie.poster}" alt="Movie poster for the movie ${movie.title}"></div>
-                        <div>Rating: ${movie.rating}</div>
-                        <div>Year: ${movie.year}</div>
-                        <button id="button-rm-movie" type="submit" data-id="${movie.id}">Remove</button>
-                    `
-                movies.innerHTML += html;
-            })
-
-        });
-    $("#button-rm-movie").click(function () {
-        console.log(`clicking rm button`)
-        // rmMovie(id);
-    })
-}
-
-
-// anthony work
-// add movie function
 $(document).ready(function () {
     let movieArray = [];
     let url = "https://equal-factual-wallet.glitch.me/movies";
     const moviePosters = () => {
-        let loader = `<div class="loading"><img src=""></div>`;
+        let loader = `<div class="loading"><img src="../img/ben-redblock-loading.gif"></div>`;
         $("#container").html(loader);
         fetch(url)
             .then(resp => resp.json())
@@ -67,20 +18,52 @@ $(document).ready(function () {
                     html += `<option value=${movie.id}>${movie.title}</option>`;
 
                     //creates movie posters
-                    // htmlStr += `<div class="posters grow gradient-border"><div>`
-                    // htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
-                    // htmlStr += `<div class="description">${movie.plot}</div>`;
-                    // htmlStr += `</div></div>`;
+                    htmlStr += `<div class="posters grow gradient-border"><div>`
+                    htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
+                    htmlStr += `<div class="underImgContainer"><div class="rating">${createStars(movie)}</div><div class="director">By: ${movie.director}</div></div>`;
+                    htmlStr += `<div class="description">${movie.plot}</div>`;
+                    htmlStr += `</div></div>`;
                 }
 
                 //pushes created card or dropdown menu to the screen
                 console.log(movies)
                 $("#container").html(htmlStr);
                 $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
+                $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
             });
     }
-
     moviePosters();
+
+    //when the option selected is changed, update the input fields
+    $("#selectMenu").change(function () {
+        let target = $(this).val()
+        console.log(target);
+
+        //grab info from the json file and populate the input fields
+        for (let movie of movieArray) {
+            if (movie.id == target) {
+                $("#newTitle").val(movie.title);
+                $("#newGenre").val(movie.genre);
+                $("#newRating").val(movie.rating);
+                $("#newDirector").val(movie.director);
+                $("#newPlot").val(movie.plot);
+            }
+        }
+    })
+
+    function createStars(movie) {
+        let html = "";
+        for (var i = 0; i < movie.rating; i++) {
+            html += "<i class=\"fas fa-star\" style='color: yellow'></i>"
+        }
+        if (movie.rating !== 5) {
+            for (var j = movie.rating; j < 5; j++) {
+                html += "<i class=\"fas fa-star\"></i>";
+            }
+        }
+        return html;
+    }
+
     //Edit selected movie
     $("#changeMovie").click(function () {
         let input = $("#selectMenu").val()
@@ -103,45 +86,26 @@ $(document).ready(function () {
             .then(moviePosters);
     });
 
-    // $("#button-rm-movie").click(function () {
-    //     console.log(`clicking rm button`)
-    //     // rmMovie(id);
-    // })
-
-    function rmMovie(id) {
-        let options = {
-            method: 'DELETE'
+    //delete movie
+    let deleteOptions = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
         }
+    };
 
-        fetch(`${glitchUrl}/${id}`, options)
-            .then(moviePosters());
-    }
-
-// select menu 1 updating field edit
-
-    $("#selectMenu").change(function () {
-        let target = $(this).val()
-        console.log(target);
-
-        // grab info from json to  populate fields
-        for (let movie of movieArray) {
-            if (movie.id == target) {
-                $("#newTitle").val(movie.title);
-                $("#newGenre").val(movie.genre);
-                $("#newRating").val(movie.rating);
-                $("#newDirector").val(movie.director);
-                $("#newPlot").val(movie.plot);
-            }
-        }
+    $("#selectMenu2").change(function () {
+        let inputVal = $(this).val();
+        console.log("hello: " + inputVal);
+        $("#delete-movie").click(function () {
+            //DELETE request
+            fetch(`${url}/${inputVal}`, deleteOptions)
+                .then(moviePosters);
+        });
     });
 
-// End select menu field 1
 
-// Edit movie Function
-
-
-// Adding new moives
-
+    //create a new movie
     $('#newMovie').click((e) => {
         e.preventDefault();
 
@@ -160,9 +124,10 @@ $(document).ready(function () {
             body: JSON.stringify(addMovie)
         }
         //POST movie
-        fetch(glitchUrl, postOptions)
+        fetch(url, postOptions)
             .then(resp => resp.json())
             .then(moviePosters).catch(error => console.log(error))
     });
+
+    //end of document ready
 });
-// end add movie
