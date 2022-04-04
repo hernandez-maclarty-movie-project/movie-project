@@ -114,6 +114,12 @@ a:hover {
     margin-bottom: 5px;
 }
 
+
+/* BEGIN CONTAINER-MOVIE-CARDS */
+.container-movie-cards {
+    border: solid blue 2px; /* removeremove */
+}
+
 /* Section 1 Style Ends */
 
 /* Section 2 Style Start */
