@@ -1,5 +1,5 @@
 "use strict";
-
+let movieArray= ''
 init();
 
 function init() {
@@ -9,8 +9,8 @@ function init() {
 
     function renderMoviePosters() {
         let movieArray = [];
-        // let loader = `<div class="loading"><img src="../img/ben-redblock-loading.gif"></div>`;
-        // $("#movie-container").html(loader);
+        let loader = `<div class="loading"><img src="../img/ben-redblock-loading.gif"></div>`;
+        $("#movie-container").html(loader);
         fetch(url)
             .then(resp => resp.json())
             .then(movies => {
@@ -22,7 +22,19 @@ function init() {
                 for (let movie of movies) {
 
                     //creates the dropdown menus for select
-                    html += `<option value=${movie.id}>${movie.title}</option>`;
+                    html += `<option value=${movie.id}>${movie.title}</option> 
+                    <div class="posters grow gradient-border">
+                        <div>
+                            <h1 class="title">${movie.title}</h1>
+                            <div class="genre">${movie.genre}</div>
+                            <img src=${movie.poster}>
+                            <div class="underImgContainer">
+                            <div class="director">By: ${movie.director}</div>
+                            </div>
+                                <div class="description">${movie.plot}</div>
+                        </div>
+                    </div>
+                }`;
 
                     //language=HTML
                     //creates movie posters
@@ -41,7 +53,6 @@ function init() {
 // end render card function
                 //pushes created card or dropdown menu to the screen
                 //
-
                 $("#movie-container").html(html);
                 $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
                 $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
