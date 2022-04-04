@@ -6,15 +6,18 @@ function init() {
 
     let url = "https://equal-factual-wallet.glitch.me/movies";
 
+    renderMoviePosters();
 
     function renderMoviePosters() {
-        console.log(`movieposters`);
+
+        // console.log(`movieposters`);
         let movieArray = [];
-        let loader = `<div class="loading"><img src="../img/ben-redblock-loading.gif"></div>`;
-        $("#movie-container").html(loader);
+        // let loader = `<div class="loading"><img src="../img/ben-redblock-loading.gif"></div>`;
+        // $("#movie-container").html(loader);
         fetch(url)
             .then(resp => resp.json())
             .then(movies => {
+
                 movieArray = movies;
                 let htmlStr = "";
                 let html = "";
@@ -23,24 +26,27 @@ function init() {
 
                     //creates the dropdown menus for select
                     html += `<option value=${movie.id}>${movie.title}</option>`;
+
                     //language=HTML
                     //creates movie posters
                     htmlStr = `<div class="posters grow gradient-border">
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-                            <img src=${movie.poster}>
-                                <div class="underImgContainer">
-                                    <div class="director">By: ${movie.director}</div>
-                                </div>
+<!--                            <img src=${movie.poster}>-->
+                            <div class="underImgContainer">
+                            <div class="director">By: ${movie.director}</div>
+                            </div>
                                 <div class="description">${movie.plot}</div>
                         </div>
+                       
                     </div>
+                    
                 `;
                 }
 // end render card function
                 //pushes created card or dropdown menu to the screen
-                console.log(movies)
+
                 $("#movie-container").html(htmlStr);
                 $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
                 $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
@@ -79,7 +85,7 @@ function init() {
     //create a new movie
     $('#newMovie').click((e) => {
         e.preventDefault();
-        console.log(`click addmovie`)
+
 
         var addMovie = {
             title: $("#title").val(),
