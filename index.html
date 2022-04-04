@@ -36,7 +36,7 @@
 
             <button class="search_button">SEARCH</button>
             &nbsp;<br>
-<!--            <p class="lorem"></p>-->
+            <!--            <p class="lorem"></p>-->
         </div>
     </div>
 
@@ -50,65 +50,66 @@
         <!--edit menu-->
         <div class="rightSide d-flex row">
             <div class="container-fluid">
-            <div class="">
-                <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
-                <select  id="selectMenu" class="select"></select>
-                <div class="editMovie" id="editMovie">
-                    <label for="newTitle">Change Title </label>
-                    <input type="text" id="newTitle">
+                <div class="">
+                    <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
+                    <select id="selectMenu" class="select"></select>
+                    <div class="editMovie" id="editMovie">
+                        <label for="newTitle">Change Title </label>
+                        <input type="text" id="newTitle">
+                        <br>
+                        <label for="newGenre">Change Genre </label>
+                        <input type="text" id="newGenre">
+                        <br>
+                        <label for="newRating">Change Rating </label>
+                        <input type="text" id="newRating">
+                        <br>
+                        <label for="newDirector">Change Director </label>
+                        <input type="text" id="newDirector">
+                        <br>
+                        <div class="textBox">
+                            <label for="newPlot">Change plot </label>
+                            <textarea id="newPlot" rows="3" cols="30"></textarea>
+                        </div>
+
+                        <br>
+                        <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
+                    </div>
+                </div>
+                <!--Delete menu-->``
+                <select id="selectMenu2" class="select">
+                    <option>Delete a movie</option>
+                </select>
+                <button id="delete-movie" class="btn btn-danger">Delete movie</button>
+            </div>
+        </div>
+
+        <!--Post menu-->
+        <div class="">
+            <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
+            <div class="container-fluid">
+                <div class="editMovie" id="postMovie">
+                    <label for="title">Title </label>
+                    <input type="text" id="title">
                     <br>
-                    <label for="newGenre">Change Genre </label>
-                    <input type="text" id="newGenre">
+                    <label for="genre">Genre </label>
+                    <input type="text" id="genre">
                     <br>
-                    <label for="newRating">Change Rating </label>
-                    <input type="text" id="newRating">
+                    <label for="rating">Rating </label>
+                    <input type="text" id="rating">
                     <br>
-                    <label for="newDirector">Change Director </label>
-                    <input type="text" id="newDirector">
+                    <label for="director">Director </label>
+                    <input type="text" id="director">
                     <br>
                     <div class="textBox">
-                        <label for="newPlot">Change plot </label>
-                        <textarea id="newPlot" rows="3" cols="30"></textarea>
+                        <label for="plot">Plot </label>
+                        <textarea id="plot" rows="5" cols="40"></textarea>
                     </div>
 
                     <br>
-                    <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
+                    <button id="newMovie" class="btn button-outline-secondary">Add Movie</button>
                 </div>
             </div>
-            <!--Delete menu-->``
-            <select id="selectMenu2" class="select">
-                <option>Delete a movie</option>
-            </select>
-            <button id="delete-movie" class="btn btn-danger">Delete movie</button>
         </div>
-    </div>
-
-    <!--Post menu-->
-    <div class="">
-        <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
-        <div class="container-fluid">
-        <div class="editMovie" id="postMovie">
-            <label for="title">Title </label>
-            <input type="text" id="title">
-            <br>
-            <label for="genre">Genre </label>
-            <input type="text" id="genre">
-            <br>
-            <label for="rating">Rating </label>
-            <input type="text" id="rating">
-            <br>
-            <label for="director">Director </label>
-            <input type="text" id="director">
-            <br>
-            <div class="textBox">
-                <label for="plot">Plot </label>
-                <textarea id="plot" rows="5" cols="40"></textarea>
-            </div>
-
-            <br>
-            <button id="newMovie" class="btn button-outline-secondary">Add Movie</button>
-        </div>
-    </div>
     </div>
     <!-- end of section-->
     <!--    End of Editing section and add section-->
@@ -121,12 +122,17 @@
         <div class="latest_movies">
             <div class="column">
                 <div class="col-md-4">
-            <img src="img/p_blackwidow_21043_v2_6d1b73b8.jpeg" alt="Blackwidow" class="img-responsive img-rounded">
-            <img src="img/the-suicide-squad-team-i109819.jpg" alt="Suicidesquad" class="img-responsive img-rounded">
-            <img src="img/nima-neemz-nakhshab-avengers.jpg" alt="Avengers" class="img-responsive img-rounded">
-            <img src="img/ea2fc11ea6494e54ad15a44a20226929_Large.jpg" alt="Avengers" class="img-responsive img-rounded">
-            <img src="img/captain-marvel-movie-poster.jpg" alt="Capt" class="img-responsive img-rounded">
-            <img src="img/black-panther-web.jpg" alt="Blackpanther" class="img-responsive img-rounded">
+                    <img src="img/p_blackwidow_21043_v2_6d1b73b8.jpeg" alt="Blackwidow"
+                         class="img-responsive img-rounded">
+                    <img src="img/the-suicide-squad-team-i109819.jpg" alt="Suicidesquad"
+                         class="img-responsive img-rounded">
+                    <img src="img/nima-neemz-nakhshab-avengers.jpg" alt="Avengers" class="img-responsive img-rounded">
+                    <img src="img/ea2fc11ea6494e54ad15a44a20226929_Large.jpg" alt="Avengers"
+                         class="img-responsive img-rounded">
+                    <img src="img/captain-marvel-movie-poster.jpg" alt="Capt" class="img-responsive img-rounded">
+                    <img src="img/black-panther-web.jpg" alt="Blackpanther" class="img-responsive img-rounded">
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -145,6 +151,7 @@
                 </div>
             </div>
         </div>
+    </div>
     <!--    End of tv show editing section-->
 
 </section>

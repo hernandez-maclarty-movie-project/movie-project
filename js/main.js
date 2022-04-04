@@ -18,7 +18,7 @@ $(document).ready(function () {
                     html += `<option value=${movie.id}>${movie.title}</option>`;
 
                     //creates movie posters
-                    htmlStr += `<div class="posters grow gradient-border container-movie-cards"><div>`
+                    htmlStr += `<div class="posters grow gradient-border"><div>`
                     htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
                     htmlStr += `<div class="description">${movie.plot}</div>`;
                     htmlStr += `</div></div>`;
@@ -95,7 +95,7 @@ $(document).ready(function () {
     $('#newMovie').click((e) => {
         e.preventDefault();
 
-        var addMovie = {
+        let addMovie = {
             title: $("#title").val(),
             genre: $("#genre").val(),
             rating: $("#rating").val(),
