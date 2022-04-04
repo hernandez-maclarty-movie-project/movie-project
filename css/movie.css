@@ -134,9 +134,12 @@ a:hover {
     background-color: rgb(14, 30, 36);
 }
 
-.latest_movies {
-    padding: 1%;
+.img-responsive {
+    display:inline;
+    width: 30%;
+    height: 50%;
 }
+
 
 /* Section 2 Style Ends */
 

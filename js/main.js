@@ -20,7 +20,6 @@ $(document).ready(function () {
                     //creates movie posters
                     htmlStr += `<div class="posters grow gradient-border"><div>`
                     htmlStr += `<h1 class="title">${movie.title}</h1><div class="genre">${movie.genre}</div><img src=${movie.poster}>`;
-                    // htmlStr += `<div class="underImgContainer"><div class="rating">${createStars(movie)}</div><div class="director">By: ${movie.director}</div></div>`;
                     htmlStr += `<div class="description">${movie.plot}</div>`;
                     htmlStr += `</div></div>`;
                 }
@@ -50,19 +49,6 @@ $(document).ready(function () {
             }
         }
     })
-
-    // function createStars(movie) {
-    //     let html = "";
-    //     for (var i = 0; i < movie.rating; i++) {
-    //         html += "<i class=\"fas fa-star\" style='color: yellow'></i>"
-    //     }
-    //     if (movie.rating !== 5) {
-    //         for (var j = movie.rating; j < 5; j++) {
-    //             html += "<i class=\"fas fa-star\"></i>";
-    //         }
-    //     }
-    //     return html;
-    // }
 
     //Edit selected movie
     $("#changeMovie").click(function () {
@@ -109,7 +95,7 @@ $(document).ready(function () {
     $('#newMovie').click((e) => {
         e.preventDefault();
 
-        var addMovie = {
+        let addMovie = {
             title: $("#title").val(),
             genre: $("#genre").val(),
             rating: $("#rating").val(),

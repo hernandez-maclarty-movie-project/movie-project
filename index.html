@@ -36,7 +36,7 @@
 
             <button class="search_button">SEARCH</button>
             &nbsp;<br>
-<!--            <p class="lorem"></p>-->
+            <!--            <p class="lorem"></p>-->
         </div>
     </div>
 
@@ -49,64 +49,67 @@
 
         <!--edit menu-->
         <div class="rightSide d-flex row">
-            <div class="">
-                <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
-                <select  id="selectMenu" class="select"></select>
-                <div class="editMovie" id="editMovie">
-                    <label for="newTitle">Change Title </label>
-                    <input type="text" id="newTitle">
+            <div class="container-fluid">
+                <div class="">
+                    <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
+                    <select id="selectMenu" class="select"></select>
+                    <div class="editMovie" id="editMovie">
+                        <label for="newTitle">Change Title </label>
+                        <input type="text" id="newTitle">
+                        <br>
+                        <label for="newGenre">Change Genre </label>
+                        <input type="text" id="newGenre">
+                        <br>
+                        <label for="newRating">Change Rating </label>
+                        <input type="text" id="newRating">
+                        <br>
+                        <label for="newDirector">Change Director </label>
+                        <input type="text" id="newDirector">
+                        <br>
+                        <div class="textBox">
+                            <label for="newPlot">Change plot </label>
+                            <textarea id="newPlot" rows="3" cols="30"></textarea>
+                        </div>
+
+                        <br>
+                        <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
+                    </div>
+                </div>
+                <!--Delete menu-->``
+                <select id="selectMenu2" class="select">
+                    <option>Delete a movie</option>
+                </select>
+                <button id="delete-movie" class="btn btn-danger">Delete movie</button>
+            </div>
+        </div>
+
+        <!--Post menu-->
+        <div class="">
+            <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
+            <div class="container-fluid">
+                <div class="editMovie" id="postMovie">
+                    <label for="title">Title </label>
+                    <input type="text" id="title">
                     <br>
-                    <label for="newGenre">Change Genre </label>
-                    <input type="text" id="newGenre">
+                    <label for="genre">Genre </label>
+                    <input type="text" id="genre">
                     <br>
-                    <label for="newRating">Change Rating </label>
-                    <input type="text" id="newRating">
+                    <label for="rating">Rating </label>
+                    <input type="text" id="rating">
                     <br>
-                    <label for="newDirector">Change Director </label>
-                    <input type="text" id="newDirector">
+                    <label for="director">Director </label>
+                    <input type="text" id="director">
                     <br>
                     <div class="textBox">
-                        <label for="newPlot">Change plot </label>
-                        <textarea id="newPlot" rows="3" cols="30"></textarea>
+                        <label for="plot">Plot </label>
+                        <textarea id="plot" rows="5" cols="40"></textarea>
                     </div>
 
                     <br>
-                    <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
+                    <button id="newMovie" class="btn button-outline-secondary">Add Movie</button>
                 </div>
             </div>
-            <!--Delete menu-->``
-            <select id="selectMenu2" class="select">
-                <option>Delete a movie</option>
-            </select>
-            <button id="delete-movie" class="btn btn-danger">Delete movie</button>
         </div>
-    </div>
-
-    <!--Post menu-->
-    <div class="">
-        <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
-        <div class="editMovie" id="postMovie">
-            <label for="title">Title </label>
-            <input type="text" id="title">
-            <br>
-            <label for="genre">Genre </label>
-            <input type="text" id="genre">
-            <br>
-            <label for="rating">Rating </label>
-            <input type="text" id="rating">
-            <br>
-            <label for="director">Director </label>
-            <input type="text" id="director">
-            <br>
-            <div class="textBox">
-                <label for="plot">Plot </label>
-                <textarea id="plot" rows="5" cols="40"></textarea>
-            </div>
-
-            <br>
-            <button id="newMovie" class="btn button-outline-secondary">Add Movie</button>
-        </div>
-    </div>
     </div>
     <!-- end of section-->
     <!--    End of Editing section and add section-->
@@ -117,12 +120,19 @@
         &nbsp;
         <h2 class="trending_movies">Trending Movies</h2>
         <div class="latest_movies">
-            <img src="img/p_blackwidow_21043_v2_6d1b73b8.jpeg" alt="Blackwidow" class="latest_movies">
-            <img src="img/the-suicide-squad-team-i109819.jpg" alt="Suicidesquad" class="latest_movies">
-            <img src="img/nima-neemz-nakhshab-avengers.jpg" alt="Avengers" class="latest_movies">
-            <img src="img/ea2fc11ea6494e54ad15a44a20226929_Large.jpg" alt="Avengers" class="latest_movies">
-            <img src="img/captain-marvel-movie-poster.jpg" alt="Capt" class="latest_movies">
-            <img src="img/black-panther-web.jpg" alt="Blackpanther" class="latest_movies">
+            <div class="column">
+                <div class="col-md-4">
+                    <img src="img/p_blackwidow_21043_v2_6d1b73b8.jpeg" alt="Blackwidow"
+                         class="img-responsive img-rounded">
+                    <img src="img/the-suicide-squad-team-i109819.jpg" alt="Suicidesquad"
+                         class="img-responsive img-rounded">
+                    <img src="img/nima-neemz-nakhshab-avengers.jpg" alt="Avengers" class="img-responsive img-rounded">
+                    <img src="img/ea2fc11ea6494e54ad15a44a20226929_Large.jpg" alt="Avengers"
+                         class="img-responsive img-rounded">
+                    <img src="img/captain-marvel-movie-poster.jpg" alt="Capt" class="img-responsive img-rounded">
+                    <img src="img/black-panther-web.jpg" alt="Blackpanther" class="img-responsive img-rounded">
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -131,17 +141,21 @@
 <section class="section3">
     <div class="container">
         &nbsp;
-        <h2 class="movies_tv_shows">Movies & TV Shows</h2>
-        <div class="latest_movies">
-            <img src="" alt="" class="latest_movies">
-            <img src="" alt="" class="latest_movies">
-            <img src="" alt="" class="latest_movies">
+        <h2 class="movies_tv_shows">TV Shows</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img id="img" src="img/lost.jpg" class="img-responsive img-rounded">
+                    <img id="img2" src="img/tvmando.jpg" class="img-responsive img-rounded">
+                    <img id="img3" src="img/wanda.jpeg" class="img-responsive img-rounded">
+                </div>
+            </div>
         </div>
     </div>
     <!--    End of tv show editing section-->
 
 </section>
-<div class=" container-fluid details2">
+<div class="container-fluid details2">
     <div class="container details2">
         &nbsp;
         <h2 class="how_it_works">How it works?</h2>
@@ -157,7 +171,7 @@
             aliqua. veniam, quis nostrud exercitation ullamco laboris<br>
             nisi ut aliquip ex ea commodo consequat.
 
-            <span><img src="" class="signup_pics" alt="Signup"></span>
+            <span><img src="img/discount.png" class="signup_pics" alt="Signup"></span>
             <div class="space"></div>
             <strong>Pick a Plan</strong><br>
             <p></p>
@@ -166,7 +180,7 @@
             aliqua. veniam, quis nostrud exercitation ullamco laboris<br>
             nisi ut aliquip ex ea commodo consequat.
 
-            <img src="" class="pricing_pics" alt="pricing">
+            <img src="img/Price-Poster.jpg" class="img-responsive img-rounded" alt="pricing">
 
             <div class="space"></div>
             <div class="space2"></div>
@@ -178,7 +192,7 @@
             aliqua. veniam, quis nostrud exercitation ullamco laboris<br>
             nisi ut aliquip ex ea commodo consequat.
             &nbsp;
-            <img src="" class="enjoy_pics" alt="enjoy">
+            <img src="img/squid.jpg" class="img-responsive img-rounded" alt="enjoy">
         </div>
     </div>
 </div>
