@@ -21,7 +21,8 @@ body {
     width: 80%;
     margin-left: 10%;
 }
-#movie-container{
+
+#movie-container {
     width: 100%;
 }
 
@@ -120,7 +121,16 @@ a:hover {
 
 /* BEGIN CONTAINER-MOVIE-CARDS */
 .container-movie-cards {
-    border: solid blue 2px; /* removeremove */
+    outline: solid red 1px; /* removeremove */
+    height: 400px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.card-img {
+    height: 400px;
+    width: 200px;
 }
 
 /* Section 1 Style Ends */
@@ -138,7 +148,7 @@ a:hover {
 }
 
 .img-responsive {
-    display:inline;
+    display: inline;
     width: 30%;
     height: 50%;
 }

@@ -1,5 +1,5 @@
 "use strict";
-let movieArray= ''
+let movieArray = ''
 init();
 
 function init() {
@@ -21,13 +21,14 @@ function init() {
                 // begin render card function
                 for (let movie of movies) {
 
+                    //language=HTML
                     //creates the dropdown menus for select
-                    html += `<option value=${movie.id}>${movie.title}</option> 
-                    <div class="posters grow gradient-border">
+                    html += `<option value=${movie.id}></option> 
+                    <div class="posters grow gradient-border container-movie-cards">
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-                            <img src=${movie.poster}>
+                            <img class="card-img" src=${movie.poster}>
                             <div class="underImgContainer">
                             <div class="director">By: ${movie.director}</div>
                             </div>
@@ -58,6 +59,7 @@ function init() {
                 $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
             });
     }
+
     renderMoviePosters();
 
     //when the option selected is changed, update the input fields
@@ -113,44 +115,44 @@ function init() {
     });
 
     // complete
-        //delete movie
-        let deleteOptions = {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        };
+    //delete movie
+    let deleteOptions = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
 
 
-        $("#selectMenu2").change(function () {
-            let inputVal = $(this).val();
-            console.log("hello: " + inputVal);
-            $("#delete-movie").click(function () {
-                //DELETE request
-                fetch(`${url}/${inputVal}`, deleteOptions)
-                    .then(renderMoviePosters);
-            });
+    $("#selectMenu2").change(function () {
+        let inputVal = $(this).val();
+        console.log("hello: " + inputVal);
+        $("#delete-movie").click(function () {
+            //DELETE request
+            fetch(`${url}/${inputVal}`, deleteOptions)
+                .then(renderMoviePosters);
         });
+    });
 
 
-        $("#selectMenu").change(function () {
-                let target = $(this).val()
-                console.log(target);
+    $("#selectMenu").change(function () {
+            let target = $(this).val()
+            console.log(target);
 
-                //grab info from the json file and populate the input fields
-                for (let movie of movieArray) {
-                    if (movie.id == target) {
-                        $("#newTitle").val(movie.title);
-                        $("#newGenre").val(movie.genre);
-                        $("#newRating").val(movie.rating);
-                        $("#newDirector").val(movie.director);
-                        $("#newPlot").val(movie.plot);
-                    }
+            //grab info from the json file and populate the input fields
+            for (let movie of movieArray) {
+                if (movie.id == target) {
+                    $("#newTitle").val(movie.title);
+                    $("#newGenre").val(movie.genre);
+                    $("#newRating").val(movie.rating);
+                    $("#newDirector").val(movie.director);
+                    $("#newPlot").val(movie.plot);
                 }
             }
-        )
+        }
+    )
 
-        //end of document ready
+    //end of document ready
 }
 
 // )
