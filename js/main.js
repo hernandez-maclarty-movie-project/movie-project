@@ -6,11 +6,8 @@ function init() {
 
     let url = "https://equal-factual-wallet.glitch.me/movies";
 
-    renderMoviePosters();
 
     function renderMoviePosters() {
-
-        // console.log(`movieposters`);
         let movieArray = [];
         // let loader = `<div class="loading"><img src="../img/ben-redblock-loading.gif"></div>`;
         // $("#movie-container").html(loader);
@@ -33,27 +30,24 @@ function init() {
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-<!--                            <img src=${movie.poster}>-->
+                            <img src=${movie.poster}>
                             <div class="underImgContainer">
                             <div class="director">By: ${movie.director}</div>
                             </div>
                                 <div class="description">${movie.plot}</div>
                         </div>
-                       
-                    </div>
-                    
-                `;
+                    </div>`;
                 }
 // end render card function
                 //pushes created card or dropdown menu to the screen
+                //
 
-                $("#movie-container").html(htmlStr);
+                $("#movie-container").html(html);
                 $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
                 $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
             });
     }
-
-    // moviePosters();
+    renderMoviePosters();
 
     //when the option selected is changed, update the input fields
 
@@ -108,7 +102,6 @@ function init() {
     });
 
     // complete
-    function deleteMovie() {
         //delete movie
         let deleteOptions = {
             method: 'DELETE',
@@ -147,7 +140,6 @@ function init() {
         )
 
         //end of document ready
-    }
 }
 
 // )
