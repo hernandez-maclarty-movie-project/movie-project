@@ -49,6 +49,7 @@
 
         <!--edit menu-->
         <div class="rightSide d-flex row">
+            <div class="container-fluid">
             <div class="">
                 <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
                 <select  id="selectMenu" class="select"></select>
@@ -85,6 +86,7 @@
     <!--Post menu-->
     <div class="">
         <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
+        <div class="container-fluid">
         <div class="editMovie" id="postMovie">
             <label for="title">Title </label>
             <input type="text" id="title">
@@ -117,12 +119,14 @@
         &nbsp;
         <h2 class="trending_movies">Trending Movies</h2>
         <div class="latest_movies">
-            <img src="img/p_blackwidow_21043_v2_6d1b73b8.jpeg" alt="Blackwidow" class="latest_movies">
-            <img src="img/the-suicide-squad-team-i109819.jpg" alt="Suicidesquad" class="latest_movies">
-            <img src="img/nima-neemz-nakhshab-avengers.jpg" alt="Avengers" class="latest_movies">
-            <img src="img/ea2fc11ea6494e54ad15a44a20226929_Large.jpg" alt="Avengers" class="latest_movies">
-            <img src="img/captain-marvel-movie-poster.jpg" alt="Capt" class="latest_movies">
-            <img src="img/black-panther-web.jpg" alt="Blackpanther" class="latest_movies">
+            <div class="column">
+                <div class="col-md-4">
+            <img src="img/p_blackwidow_21043_v2_6d1b73b8.jpeg" alt="Blackwidow" class="img-responsive img-rounded">
+            <img src="img/the-suicide-squad-team-i109819.jpg" alt="Suicidesquad" class="img-responsive img-rounded">
+            <img src="img/nima-neemz-nakhshab-avengers.jpg" alt="Avengers" class="img-responsive img-rounded">
+            <img src="img/ea2fc11ea6494e54ad15a44a20226929_Large.jpg" alt="Avengers" class="img-responsive img-rounded">
+            <img src="img/captain-marvel-movie-poster.jpg" alt="Capt" class="img-responsive img-rounded">
+            <img src="img/black-panther-web.jpg" alt="Blackpanther" class="img-responsive img-rounded">
         </div>
     </div>
 </section>
@@ -132,12 +136,15 @@
     <div class="container">
         &nbsp;
         <h2 class="movies_tv_shows">TV Shows</h2>
-        <div class="latest_movies">
-            <img src="img/lost.jpg" alt="tvshow" class="latest_movies">
-            <img src="img/tvmando.jpg" alt="tvshow" class="latest_movies">
-            <img src="img/wanda.jpeg" alt="tvshow" class="latest_movies">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img id="img" src="img/lost.jpg" class="img-responsive img-rounded">
+                    <img id="img2" src="img/tvmando.jpg" class="img-responsive img-rounded">
+                    <img id="img3" src="img/wanda.jpeg" class="img-responsive img-rounded">
+                </div>
+            </div>
         </div>
-    </div>
     <!--    End of tv show editing section-->
 
 </section>
@@ -166,7 +173,7 @@
             aliqua. veniam, quis nostrud exercitation ullamco laboris<br>
             nisi ut aliquip ex ea commodo consequat.
 
-            <img src="img/Price-Poster.jpg" class="pricing_pics" alt="pricing">
+            <img src="img/Price-Poster.jpg" class="img-responsive img-rounded" alt="pricing">
 
             <div class="space"></div>
             <div class="space2"></div>
@@ -178,7 +185,7 @@
             aliqua. veniam, quis nostrud exercitation ullamco laboris<br>
             nisi ut aliquip ex ea commodo consequat.
             &nbsp;
-            <img src="img/squid.jpg" class="enjoy_pics" alt="enjoy">
+            <img src="img/squid.jpg" class="img-responsive img-rounded" alt="enjoy">
         </div>
     </div>
 </div>
