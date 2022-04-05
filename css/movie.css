@@ -135,16 +135,16 @@ a:hover {
 
 .section2 {
     background-color: rgb(14, 30, 36);
+
 }
 
 .img-responsive {
     display:inline;
-    width: 30%;
-    height: 50%;
+    width: 25%;
+    object-fit: cover;
+    margin: 60px;
+    padding: 0px;
 }
-
-
-/* Section 2 Style Ends */
 
 
 /* Section 3 Start */
