@@ -200,11 +200,12 @@ a:hover {
 }
 
 .img-responsive {
-    display: inline;
-    width: 30%;
-    height: 50%;
+    display:inline;
+    width: 25%;
+    object-fit: cover;
+    margin: 60px;
+    padding: 0px;
 }
-
 
 /* Section 3 Start */
 .movies_tv_shows {
