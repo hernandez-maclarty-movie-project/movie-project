@@ -23,6 +23,8 @@ body {
 }
 
 #movie-container {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -120,6 +122,16 @@ a:hover {
 
 
 /* BEGIN CONTAINER-MOVIE-CARDS */
+
+#edit-movie {
+    color: red;
+}
+
+#remove-movie {
+    color: red;
+    font-weight: 900;
+}
+
 .container-movie-cards {
     outline: solid red 1px; /* removeremove */
     height: 400px;

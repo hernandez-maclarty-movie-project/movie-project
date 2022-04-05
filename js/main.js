@@ -24,15 +24,16 @@ function init() {
                     //language=HTML
                     //creates the dropdown menus for select
                     html += `<option value=${movie.id}></option> 
-                    <div class="posters grow gradient-border container-movie-cards">
-                        <div>
+                    <div class="posters container-movie-cards">
+                        <div class="card-img" style="background-image: url(${movie.poster})">
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-                            <img class="card-img" src=${movie.poster}>
                             <div class="underImgContainer">
                             <div class="director">By: ${movie.director}</div>
                             </div>
-                                <div class="description">${movie.plot}</div>
+                            <div class="description">${movie.plot}</div>
+                            <div id="edit-movie">EDIT</div>
+                            <div id="remove-movie">X</div>
                         </div>
                     </div>
                 }`;
@@ -43,8 +44,8 @@ function init() {
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-                            <img src=${movie.poster}>
-                            <div class="underImgContainer">
+<!--                            <img src=${movie.poster}>-->
+<!--                            <div class="underImgContainer">-->
                             <div class="director">By: ${movie.director}</div>
                             </div>
                                 <div class="description">${movie.plot}</div>
