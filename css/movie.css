@@ -200,11 +200,13 @@ a:hover {
 }
 
 .img-responsive {
-    display:inline;
-    width: 25%;
-    object-fit: cover;
-    margin: 60px;
-    padding: 0px;
+    width: 30%;
+    margin: 20px;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    display: inline-block;
+    padding: 5px 0;
 }
 
 /* Section 3 Start */
