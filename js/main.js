@@ -32,7 +32,6 @@ function init() {
                             <div class="director">By: ${movie.director}</div>
                             </div>
                             <div class="description">${movie.plot}</div>
-                            <div id="edit-movie">EDIT</div>
                             <div id="remove-movie">X</div>
                         </div>
                     </div>
@@ -40,7 +39,7 @@ function init() {
 
                     //language=HTML
                     //creates movie posters
-                    htmlStr = `<div class="posters grow gradient-border">
+                    htmlStr = `<div class="posters grow gradient-border modal-add-edit hidden">
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
@@ -152,6 +151,23 @@ function init() {
             }
         }
     )
+
+    // BEGIN MODAL ACTIVATE AND CLOSE BUTTONS
+    $("#button-add-movie").click(function () {
+        $("#modal-add-movie").toggle(".hidden");
+        $("#modal-edit-movie").addClass(".hidden");
+    })
+
+    $("#button-edit-movie").click(function (event) {
+        $("#modal-edit-movie").toggle(".hidden");
+        $("#modal-add-movie").addClass(".hidden");
+    })
+
+    $(".modal-close").click(function () {
+        $(this).parent().parent().toggle(".hidden");
+    })
+
+
 
     //end of document ready
 }

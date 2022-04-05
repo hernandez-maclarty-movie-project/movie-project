@@ -27,6 +27,34 @@ body {
     display: none;
 }
 
+.modal-add-edit {
+    position: absolute;
+    margin: 0 auto;
+    width: 28rem;
+    height: 18rem;
+    left: -50%;
+    right: -50%;
+    top: 15%;
+    color: white;
+    background-color: black;
+    border: .2rem solid red;
+    border-radius: .2rem;
+}
+
+.modal-flex {
+    display: flex;
+    justify-content: end;
+}
+
+.modal-close {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 2px 3px;
+    cursor: pointer;
+    outline: 2px solid red;
+}
+
 #movie-container {
     display: flex;
     flex-wrap: wrap;
