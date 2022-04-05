@@ -14,7 +14,7 @@ function init() {
         fetch(url)
             .then(resp => resp.json())
             .then(movies => {
-
+                console.log(movies);
                 movieArray = movies;
                 let htmlStr = "";
                 let html = "";
