@@ -9,6 +9,7 @@ body {
     font-family: Raleway, sans-serif;
     background-color: black;
     color: white;
+    /*margin: 10px;*/
 }
 
 .container-fluid {
@@ -21,7 +22,42 @@ body {
     width: 80%;
     margin-left: 10%;
 }
-#movie-container{
+
+.hidden {
+    display: none;
+}
+
+.modal-add-edit {
+    position: absolute;
+    margin: 0 auto;
+    width: 28rem;
+    height: 18rem;
+    left: -50%;
+    right: -50%;
+    top: 15%;
+    color: white;
+    background-color: black;
+    border: .2rem solid red;
+    border-radius: .2rem;
+}
+
+.modal-flex {
+    display: flex;
+    justify-content: end;
+}
+
+.modal-close {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 2px 3px;
+    cursor: pointer;
+    outline: 2px solid red;
+}
+
+#movie-container {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -119,8 +155,33 @@ a:hover {
 
 
 /* BEGIN CONTAINER-MOVIE-CARDS */
+
+#edit-movie {
+    color: red;
+}
+
+#remove-movie {
+    color: red;
+    font-weight: 900;
+}
+
+#edit-movie:hover,
+#remove-movie:hover {
+    cursor: pointer;
+}
+
 .container-movie-cards {
-    border: solid blue 2px; /* removeremove */
+    outline: solid red 1px; /* removeremove */
+    height: 300px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px;
+}
+
+.card-img {
+    height: 300px;
+    width: 200px;
 }
 
 /* Section 1 Style Ends */
@@ -139,11 +200,9 @@ a:hover {
 }
 
 .img-responsive {
-    display:inline;
-    width: 25%;
-    object-fit: cover;
-    margin: 60px;
-    padding: 0px;
+    display: inline;
+    width: 30%;
+    height: 50%;
 }
 
 

@@ -31,12 +31,14 @@
             </header>
         </nav>
         &nbsp;
-
+        <div class="search_button" id="button-add-movie">ADD MOVIE</div>
+        <div class="search_button" id="button-edit-movie">EDIT MOVIE</div>
         <div>
             <h2 class="header_text">Search for Latest Movies and Series</h2>
             <input type="text" placeholder="Search for movies" class="input"><br>
 
             <button class="search_button">SEARCH</button>
+
             &nbsp;<br>
             <!--            <p class="lorem"></p>-->
         </div>
@@ -48,47 +50,53 @@
     <div class="rightSide d-flex row">
         <!--start of movie edit section-->
         <!--displays movies-->
-<!--        <div id="movie-container" class=" row d-flex"></div>-->
+        <!--        <div id="movie-container" class=" row d-flex"></div>-->
 
 
         <!--edit menu-->
-        <div class="rightSide d-flex row">
-            <div class="container-fluid">
-                <div class="">
-                    <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
-                    <select id="selectMenu" class="select"></select>
-                    <div class="editMovie" id="editMovie">
-                        <label for="newTitle">Change Title </label>
-                        <input type="text" id="newTitle">
-                        <br>
-                        <label for="newGenre">Change Genre </label>
-                        <input type="text" id="newGenre">
-                        <br>
-                        <label for="newRating">Change Rating </label>
-                        <input type="text" id="newRating">
-                        <br>
-                        <label for="newDirector">Change Director </label>
-                        <input type="text" id="newDirector">
-                        <br>
-                        <div class="textBox">
-                            <label for="newPlot">Change plot </label>
-                            <textarea id="newPlot" rows="3" cols="30"></textarea>
-                        </div>
 
-                        <br>
-                        <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
-                    </div>
-                </div>
-                <!--Delete menu-->
-                <select id="selectMenu2" class="select">
-                    <option>Delete a movie</option>
-                </select>
-                <button id="delete-movie" class="btn btn-danger">Delete movie</button>
+        <div id="modal-edit-movie" class="container-fluid modal-add-edit hidden">
+
+            <div class="modal-flex">
+                <div class="modal-close">X</div>
             </div>
+            <button id="showEdit" class="btn btn-outline-secondary">Edit</button>
+            <select id="selectMenu" class="select"></select>
+            <div class="editMovie" id="editMovie">
+                <label for="newTitle">Change Title </label>
+                <input type="text" id="newTitle">
+                <br>
+                <label for="newGenre">Change Genre </label>
+                <input type="text" id="newGenre">
+                <br>
+                <label for="newRating">Change Rating </label>
+                <input type="text" id="newRating">
+                <br>
+                <label for="newDirector">Change Director </label>
+                <input type="text" id="newDirector">
+                <br>
+                <div class="textBox">
+                    <label for="newPlot">Change plot </label>
+                    <textarea id="newPlot" rows="3" cols="30"></textarea>
+                </div>
+
+                <br>
+                <button id="changeMovie" class="btn btn-outline-secondary">Update Movie</button>
+
+            </div>
+            <!--Delete menu-->
+            <select id="selectMenu2" class="select">
+                <option>Delete a movie</option>
+            </select>
+            <button id="delete-movie" class="btn btn-danger">Delete movie</button>
         </div>
 
+
         <!--Post menu-->
-        <div class="">
+        <div id="modal-add-movie" class="modal-add-edit hidden">
+            <div class="modal-flex">
+                <div class="modal-close">X</div>
+            </div>
             <button id="post-id" class="btn btn-outline-secondary">Post Movie</button>
             <div class="container-fluid">
                 <div class="editMovie" id="postMovie">
