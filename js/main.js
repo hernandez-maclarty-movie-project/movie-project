@@ -14,7 +14,7 @@ function init() {
         fetch(url)
             .then(resp => resp.json())
             .then(movies => {
-
+                console.log(movies);
                 movieArray = movies;
                 let htmlStr = "";
                 let html = "";
@@ -24,27 +24,27 @@ function init() {
                     //language=HTML
                     //creates the dropdown menus for select
                     html += `<option value=${movie.id}></option> 
-                    <div class="posters grow gradient-border container-movie-cards">
-                        <div>
+                    <div class="posters container-movie-cards">
+                        <div class="card-img" style="background-image: url(${movie.poster})">
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-                            <img class="card-img" src=${movie.poster}>
                             <div class="underImgContainer">
                             <div class="director">By: ${movie.director}</div>
                             </div>
-                                <div class="description">${movie.plot}</div>
+                            <div class="description">${movie.plot}</div>
+                            <div id="remove-movie">X</div>
                         </div>
                     </div>
-                }`;
+                `;
 
                     //language=HTML
                     //creates movie posters
-                    htmlStr = `<div class="posters grow gradient-border">
+                    htmlStr = `<div class="posters grow gradient-border modal-add-edit hidden">
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
                             <img src=${movie.poster}>
-                            <div class="underImgContainer">
+<!--                            <div class="underImgContainer">-->
                             <div class="director">By: ${movie.director}</div>
                             </div>
                                 <div class="description">${movie.plot}</div>
@@ -151,6 +151,23 @@ function init() {
             }
         }
     )
+
+    // BEGIN MODAL ACTIVATE AND CLOSE BUTTONS
+    $("#button-add-movie").click(function () {
+        $("#modal-add-movie").toggle(".hidden");
+        $("#modal-edit-movie").addClass(".hidden");
+    })
+
+    $("#button-edit-movie").click(function (event) {
+        $("#modal-edit-movie").toggle(".hidden");
+        $("#modal-add-movie").addClass(".hidden");
+    })
+
+    $(".modal-close").click(function () {
+        $(this).parent().parent().toggle(".hidden");
+    })
+
+
 
     //end of document ready
 }
