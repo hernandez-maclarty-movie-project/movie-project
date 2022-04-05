@@ -9,6 +9,7 @@ body {
     font-family: Raleway, sans-serif;
     background-color: black;
     color: white;
+    /*margin: 10px;*/
 }
 
 .container-fluid {
@@ -139,14 +140,15 @@ a:hover {
 
 .container-movie-cards {
     outline: solid red 1px; /* removeremove */
-    height: 400px;
+    height: 300px;
     width: 200px;
     background-repeat: no-repeat;
     background-position: center center;
+    margin: 3px;
 }
 
 .card-img {
-    height: 400px;
+    height: 300px;
     width: 200px;
 }
 

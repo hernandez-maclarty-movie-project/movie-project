@@ -36,7 +36,7 @@ function init() {
                             <div id="remove-movie">X</div>
                         </div>
                     </div>
-                }`;
+                `;
 
                     //language=HTML
                     //creates movie posters
@@ -44,7 +44,7 @@ function init() {
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-<!--                            <img src=${movie.poster}>-->
+                            <img src=${movie.poster}>
 <!--                            <div class="underImgContainer">-->
                             <div class="director">By: ${movie.director}</div>
                             </div>
