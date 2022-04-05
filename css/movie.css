@@ -132,6 +132,11 @@ a:hover {
     font-weight: 900;
 }
 
+#edit-movie:hover,
+#remove-movie:hover {
+    cursor: pointer;
+}
+
 .container-movie-cards {
     outline: solid red 1px; /* removeremove */
     height: 400px;
