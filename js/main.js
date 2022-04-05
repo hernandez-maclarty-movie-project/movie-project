@@ -18,12 +18,13 @@ function init() {
                 movieArray = movies;
                 let htmlStr = "";
                 let html = "";
+                let html2 = "";
                 // begin render card function
                 for (let movie of movies) {
 
                     //language=HTML
                     //creates the dropdown menus for select
-                    html += `<option value=${movie.id}></option> 
+                    html += `
                     <div class="posters container-movie-cards">
                         <div class="card-img" style="background-image: url(${movie.poster})">
                             <h1 class="title">${movie.title}</h1>
@@ -37,13 +38,16 @@ function init() {
                     </div>
                 `;
 
+                    //creates the dropdown menus for select
+                    html2 += `<option value=${movie.id}>${movie.title}</option>`;
+
                     //language=HTML
                     //creates movie posters
                     htmlStr = `<div class="posters grow gradient-border modal-add-edit hidden">
                         <div>
                             <h1 class="title">${movie.title}</h1>
                             <div class="genre">${movie.genre}</div>
-                            <img src=${movie.poster}>
+                            
 <!--                            <div class="underImgContainer">-->
                             <div class="director">By: ${movie.director}</div>
                             </div>
@@ -55,8 +59,8 @@ function init() {
                 //pushes created card or dropdown menu to the screen
                 //
                 $("#movie-container").html(html);
-                $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html);
-                $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html);
+                $("#selectMenu").html("<option value='-1' selected>Select a movie</option>" + html2);
+                $("#selectMenu2").html("<option value='-1' selected>Select a movie</option>" + html2);
             });
     }
 
